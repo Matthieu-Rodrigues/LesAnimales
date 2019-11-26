@@ -12,9 +12,9 @@ namespace LesAnimales.Controllers
     {
         List<Offre> galerie = new List<Offre>()
             {
-                new Offre(id:1, titre:"Lilian le Kraken", description:"Lilian est en gentil kraken affectif", photo:"", prix:10.00),
-                new Offre(id:2, titre:"Matthieu le Raton", description:"Matthieu est un adorable raton calin", photo:"", prix:12.00),
-                new Offre(id:3, titre:"Benjamin L'écureuil", description:"Benjamin est un écureuil curieux", photo:"", prix:100.00)
+                new Offre(id:1, titre:"Lilian le Kraken", description:"Lilian est en gentil kraken affectif", photo:"kraken.png", prix:10.00),
+                new Offre(id:2, titre:"Matthieu le Raton", description:"Matthieu est un adorable raton calin", photo:"raton.png", prix:12.00),
+                new Offre(id:3, titre:"Benjamin L'écureuil", description:"Benjamin est un écureuil curieux", photo:"ecu.png", prix:100.00)
             };
 
         // GET: Offre
