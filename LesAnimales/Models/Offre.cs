@@ -22,6 +22,18 @@ namespace LesAnimales.Models
             this.photo = photo;
             this.prix = prix;
         }
+        
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                this.id = value;
+            }
+        }
 
         public string Titre
         {
