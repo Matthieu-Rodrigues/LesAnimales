@@ -14,12 +14,62 @@ namespace LesAnimales.Models
         private string photo;
         private double prix;
 
-        public string Titre { get; set; }
-        public string Description { get; set; }
+        public Offre(int id, string titre, string description, string photo, double prix)
+        {
+            this.id = id;
+            this.titre = titre;
+            this.description = description;
+            this.photo = photo;
+            this.prix = prix;
+        }
 
-        public string Photo { get; set; }
+        public string Titre
+        {
+            get
+            {
+                return titre;
+            }
+            set
+            {
+                this.titre = value;
+            }
+        }
+        public string Description
+        {
 
-        public double Prix { get; set; }
+            get
+            {
+                return description;
+            }
+            set
+            {
+                this.description = value;
+            }
+        }
+
+        public string Photo
+        {
+            get
+            {
+                return photo;
+            }
+            set
+            {
+                this.photo = value;
+            }
+        }
+
+        public double Prix
+        {
+            get
+            {
+                return prix;
+            }
+            set
+            {
+                this.prix = value;
+            }
+        }
 
     }
 }
