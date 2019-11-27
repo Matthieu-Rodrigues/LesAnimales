@@ -5,21 +5,30 @@ using System.Threading.Tasks;
 using LesAnimales.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using LesAnimales.Models;
 
 namespace LesAnimales.Controllers
 {
     public class OffreController : Controller
     {
+        List<Offre> galerie = new List<Offre>()
+            {
+                new Offre(id:1, titre:"Lilian le Kraken", description:"Lilian est en gentil kraken affectif", photo:"kraken.png", prix:10.00),
+                new Offre(id:2, titre:"Matthieu le Raton", description:"Matthieu est un adorable raton calin", photo:"raton.png", prix:12.00),
+                new Offre(id:3, titre:"Benjamin L'écureuil", description:"Benjamin est un écureuil curieux", photo:"ecu.png", prix:100.00)
+            };
+
         // GET: Offre
         public ActionResult Index()
         {
-            return View();
+            return View(galerie);
         }
 
         // GET: Offre/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var query = galerie.FirstOrDefault(x => x.Id == id); //Permet de récupérer l'offre en fonction de l'ID (ce LinQ récupère le 1er élément où l'ID de l'offre correspond à l'ID du paramètre)
+            return View(query);
         }
 
         // GET: Offre/Create
@@ -48,6 +57,7 @@ namespace LesAnimales.Controllers
         // GET: Offre/Edit/5
         public ActionResult Edit(int id)
         {
+
             return View();
         }
 

@@ -13,7 +13,7 @@ namespace LesAnimales.Models
         private string description;
         private string photo;
         private double prix;
-        
+
         public Offre(int id, string titre, string description, string photo, double prix)
         {
             this.id = id;
@@ -22,6 +22,41 @@ namespace LesAnimales.Models
             this.photo = photo;
             this.prix = prix;
         }
+        public string Titre
+        {
+            get
+            {
+                return titre;
+            }
+            set
+            {
+                this.titre = value;
+            }
+        }
+        public string Description
+        {
+
+        public Offre(int id, string titre, string description, string photo, double prix)
+        {
+            this.id = id;
+            this.titre = titre;
+            this.description = description;
+            this.photo = photo;
+            this.prix = prix;
+        }
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                this.id = value;
+            }
+        }
+
         public string Titre
         {
             get
