@@ -3,23 +3,7 @@
 @{
     ViewBag.Title = "Details";
     Layout = "_Layout";
-
-    var data = ViewBag.Message;
 }
 
 <h2>LesAnimales - Detail</h2>
 
-<div id="main-wrapper">
-    <article>
-        <img href="@data.photo" alt="@data.photo"/>
-        <div id="details">
-            <h3>@data.titre</h3>
-
-            <label for="description">Description :</label>
-            <p id="description">@data.description</p>
-
-            <label for="price">Prix :</label>
-            <p id="price">@data.prix</p>
-        </div>
-    </article>
-</div>
