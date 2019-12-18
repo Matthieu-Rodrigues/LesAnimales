@@ -8,10 +8,17 @@ namespace LesAnimales.Models
 {
     public class Offre
     {
-        private int id;
+        private int? id;
+
+        [Required]
+        [StringLength(200)]
         private string titre;
         private string description;
+
+        [Required]
         private string photo;
+
+        [Required]
         private double prix;
 
         public Offre(int id, string titre, string description, string photo, double prix)
@@ -22,6 +29,7 @@ namespace LesAnimales.Models
             this.photo = photo;
             this.prix = prix;
         }
+
         public string Titre
         {
             get
@@ -33,19 +41,8 @@ namespace LesAnimales.Models
                 this.titre = value;
             }
         }
-        public string Description
-        {
 
-        public Offre(int id, string titre, string description, string photo, double prix)
-        {
-            this.id = id;
-            this.titre = titre;
-            this.description = description;
-            this.photo = photo;
-            this.prix = prix;
-        }
-
-        public int Id
+        public int? Id
         {
             get
             {
@@ -57,17 +54,7 @@ namespace LesAnimales.Models
             }
         }
 
-        public string Titre
-        {
-            get
-            {
-                return titre;
-            }
-            set
-            {
-                this.titre = value;
-            }
-        }
+
         public string Description
         {
 

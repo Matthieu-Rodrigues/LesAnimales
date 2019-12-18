@@ -12,6 +12,9 @@ using Microsoft.EntityFrameworkCore;
 using LesAnimales.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Data;
+using System.Data.SqlClient;
+using LesAnimales.Models;
 
 namespace LesAnimales
 {
@@ -36,9 +39,12 @@ namespace LesAnimales
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                    Configuration.GetConnectionString("bdd")));
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<IDbConnection>(sp => new SqlConnection(Configuration.GetConnectionString("bdd")));
+
+            services.AddScoped<IOffreRepository, OffreRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
